@@ -1,0 +1,93 @@
+.login-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+
+    .login-form {
+        width: 100%;
+        max-width: 400px;
+        height: 520px;
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 20px 0 0 20px;
+        border-right: 1px solid #ccc;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .username-input {
+            position: relative;
+
+            .user-icon {
+                position: absolute;
+                top: 20%;
+                right: 8px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                width: 18px;
+                color: gray;
+            }
+        }
+
+        .password-input {
+            position: relative;
+            
+            .password-icon-container {
+                position: absolute;
+                top: 20%;
+                right: 8px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                color: gray;
+
+                &:hover {
+                    color: black;
+                }
+                .password-icon {
+                    width: 18px;
+                }
+            }
+
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: right;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .btn-position {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .signup-link {
+        padding-top: 150px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .link {
+        text-decoration: none;
+        color: #FF735C;
+    }
+
+    .login-image {
+        width: 600px;
+        height: 600px;
+        max-width: 1200px;
+        background-image: url("../../../assets/wallet-login.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 0 20px 20px 0;
+    }
+}

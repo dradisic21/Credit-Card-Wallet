@@ -1,0 +1,26 @@
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #fcfeff;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border-bottom: 1px solid #FF735C;
+    }
+
+}

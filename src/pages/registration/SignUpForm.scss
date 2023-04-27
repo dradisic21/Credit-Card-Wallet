@@ -1,0 +1,60 @@
+.registration-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+
+
+    .registration-form {
+        width: 100%;
+        max-width: 400px;
+        height: 520px;
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 20px 0 0 20px;
+        border-right: 1px solid #ccc;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .user-input,
+    .email-input,
+    .password-input {
+        position: relative;
+
+        .user-icon,
+        .email-icon,
+        .password-icon {
+            width: 18px;
+            position: absolute;
+            top: 20%;
+            right: 8px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: gray;
+        }
+        .password-icon:hover {
+            color: black;
+        }
+    }
+
+    .btn-position {
+        display: flex;
+        justify-content: center;
+    }
+
+    .signup-image {
+        width: 600px;
+        height: 600px;
+        max-width: 1200px;
+        background-image: url("../../../assets/wallet-login.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 0 20px 20px 0;
+    }
+}
