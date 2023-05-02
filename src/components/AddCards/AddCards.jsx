@@ -63,6 +63,7 @@ export function AddCards () {
               onFocus={handleInputFocus}
               onBlur={handleInputBlur}
               value={data.number}
+              pattern="[\d| ]{16,22}"
               placeholder="Card Number"
             />
           </div>
@@ -87,6 +88,7 @@ export function AddCards () {
               onFocus={handleInputFocus}
               onBlur={handleInputBlur}
               value={data.expiry}
+              pattern="\d\d/\d\d"
               placeholder="MM/YY"
             />
           </div>
@@ -99,6 +101,7 @@ export function AddCards () {
               onFocus={handleInputFocus}
               onBlur={handleInputBlur}
               value={data.cvc}
+              pattern="\d{3,4}"
               placeholder="CVC"
             />
           </div>

@@ -16,7 +16,7 @@ export function LoginForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    navigate('/addcards');
+    navigate('/home');
   }
 
   const toggleShowPassword = () => {
