@@ -1,0 +1,38 @@
+ [
+    {
+      "id": 1,
+      "link": "#",
+      "icon": "fas fa-sharp fa-regular fa-grip-vertical",
+      "label": "Dashboard"
+    },
+    {
+      "id": 2,
+      "link": "/wallet",
+      "icon": "fas fa-wallet",
+      "label": "Wallet"
+    },
+    {
+      "id": 3,
+      "link": "#",
+      "icon": "fas fa-database",
+      "label": "Report"
+    },
+    {
+      "id": 4,
+      "link": "#",
+      "icon": "fas fa-thin fa-mobile",
+      "label": "Support"
+    },
+    {
+      "id": 5,
+      "link": "#",
+      "icon": "fas fa-cog",
+      "label": "Setting"
+    },
+    {
+      "id": 6,
+      "link": "#",
+      "icon": "fas fa-sign-out-alt",
+      "label": "Log out"
+    }
+  ]

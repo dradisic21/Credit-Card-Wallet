@@ -1,67 +1,43 @@
-import { Link } from 'react-router-dom';
-import { Button } from '../../UI/Button/Button';
-import "./Navbar.scss";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import fetchMenuItems from "./menuItemsAPI";
 
 export function Navbar() {
+  const [menuItems, setMenuItems] = useState([]);
 
-    const handleLogout = () => {
-        // Implementacija funkcije za odjavu korisnika
-      };
+  
+  useEffect(() => {
+    const getMenuItems = async () => {
+      const items = await fetchMenuItems();
+      setMenuItems(items);
+    };
+
+    getMenuItems();
+  }, []);
 
   return (
-    <div class="container">
+    <div className="container">
       <nav>
         <ul>
-          <Link href="#" class="logo">
-            <img src="../../assets/logo/wallet-logo.png" />
-            <span class="nav-item">WALLET</span>
+          <Link href="#" className="logo">
+            <img src="../../assets/logo/wallet-logo.png" alt="Logo" />
+            <span className="nav-item">WALLET</span>
           </Link>
-            <div>
-                <img src="" alt="profilna" />
-            </div>
-          <li>
-            <Link to="#">
-              <i class="fas fa-sharp fa-regular fa-grip-vertical"></i>
-              <span class="nav-item">Dashboard</span>
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/wallet">
-              <i class="fas fa-wallet "></i>
-              <span class="nav-item">Wallet</span>
-            </Link>
-          </li>
-
-          <li>
-            <Link to="#">
-              <i class="fas fa-database"></i>
-              <span class="nav-item">Report</span>
-            </Link>
-          </li>
-
-          <li>
-            <Link to="#">
-              <i class="fas fa-thin fa-mobile"></i>
-              <span class="nav-item">Support</span>
-            </Link>
-          </li>
-
-          <li>
-            <Link to="#" className="settings">
-              <i class="fas fa-cog"></i>
-              <span class="nav-item">Setting</span>
-            </Link>
-          </li>
-
-          <li>
-            <Link to="#" class="logout" onClick={handleLogout}>
-              <i class="fas fa-sign-out-alt"></i>
-              <span class="nav-item">Log out</span>
-            </Link>
-          </li>
+          <div>
+            <img src="" alt="profilna" />
+          </div>
+          {menuItems.map((item, index) => (
+            <li key={index.id}>
+              <Link to={item.link}>
+                <i className={item.icon}></i>
+                <span className="nav-item">{item.label}</span>
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
   );
-}
+};
+
+

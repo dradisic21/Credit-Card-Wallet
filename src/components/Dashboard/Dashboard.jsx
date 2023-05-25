@@ -14,15 +14,29 @@ export function Dashboard() {
   }, []);
 
   return (
-    <div>
-      <Cards
+    <div className='dashboard-container'>
+      {/* <Cards
         number={cardInfo.number}
         name={cardInfo.name}
         expiry={cardInfo.expiry}
         cvc={cardInfo.cvc}
-      />
+      /> */}
       <div>
-        <Charts />
+        {/* <Charts /> */}
+      </div>
+      <div>
+        <div className=''>
+          <h4>Transport</h4>
+          <p>$195.25</p>
+        </div>
+        <div>
+          <h4>Shopping</h4>
+          <p>$230.50</p>
+        </div>
+        <div>
+          <h4>Subscriptions</h4>
+          <p>$1.125.00</p>
+        </div>
       </div>
     </div>
   );
